@@ -4,8 +4,6 @@
 </head>  
 <body>  
 <?php 
-define("P","023");
-echo P;
 ?>
 <form method="post">  
     Enter the Number:<br>  
