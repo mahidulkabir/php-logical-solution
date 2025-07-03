@@ -1,6 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade checking</title>
+</head>
+<body>
+    <h2>Check Your Grade By Number</h2>
+    <form action="<?PHP $_SERVER['PHP_SELF']?>" method="POST">
+        <label for="grade">Provide Your Grade:</label>
+        <input type="number" name="grade" id="grade"> <br>
+        <input type="submit" value="submit" name="submit">
+    </form>
+
+
 <?php
 // Function to determine the grade based on the score
-function getGrade($score) {
+if(isset($_POST['submit'])){
+    $score= $_POST['grade'];
+   function getGrade($score) {
     $grade = ""; // Initialize the grade variable
 
     // Use conditional statements to determine the grade
@@ -19,12 +37,18 @@ function getGrade($score) {
     return $grade; // Return the grade
 }
 
-// Input score
-$score = 90;
+
 
 // Call the function to determine the grade
 $result = getGrade($score);
 
 // Display the result
-echo "The grade for a score of $score is: $result";
+echo "The grade for a score of $score is: $result"; 
+};
+
 ?>
+
+
+</body>
+</html>
+

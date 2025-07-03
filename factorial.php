@@ -3,18 +3,15 @@
 <title>Factorial Program using loop in PHP</title>  
 </head>  
 <body>  
-<?php 
-define("P","023");
-echo P;
-?>
+
 <form method="post">  
     Enter the Number:<br>  
     <input type="number" name="number" id="number">  
-    <input type="submit" name="submit" value="Submit" />  
+    <input type="submit" name="submit" value="submit" />  
 </form>  
 
 <?php   
-    if($_POST){
+    if (isset($_POST['submit'])) {
         $fact = 1;  
         //getting value from input text box 'number'  
         $number = $_POST['number'];  
@@ -26,5 +23,5 @@ echo P;
             echo $fact . "<br>";  
     }  
 ?>  
-</body>  
+</body> 
 </html>  
